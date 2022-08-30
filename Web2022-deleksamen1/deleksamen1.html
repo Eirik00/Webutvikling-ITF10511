@@ -1,0 +1,48 @@
+<!-- Gjennom w3 validator dukket det opp 17 errorer -->
+<!--Her må vi definere doctype-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"><!-- det er alltid lurt å definere en charset for filen-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css"><!-- her må stringen lukkes-->
+        <title>Web eksamen del 1</title>
+    </head>
+    <body><!-- head kan ikke bli definert inne i body taggen-->   
+        <nav>
+            <h1>Logo</h1>
+                <ul><!-- <li> taggen må bli brukt inne i en liste med <ol> eller <ul>-->
+                    <li> <a href="#">Boatswain schooner</a></li>
+                    <li> <a href="#">Account lookout</a></li>
+                    <li> <a href="#">Sail ho shrouds</a></li>
+                </ul>
+        </nav>
+        <header>
+            <h1>Yar Pirate Ipsum</h1>
+            <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
+            <a class="button">Les mer</a>
+        </header>
+        <main><!-- Siden det ikke blir brukt id(#) så må taggen bli kalt main-->
+            <article>
+                <h1>Prow scuttle</h1>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article><!-- Her er ikke article lukket-->
+            <article>
+                <h1>Jack Tar transom</h1>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+            <article>
+                <h1>Trysail Sail</h1>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+        </main>
+        <footer>
+            <span>Twitter</span>
+            <span>Facebook</span>
+            <span>Instagram</span>
+        </footer>
+    </body>
+</html>
