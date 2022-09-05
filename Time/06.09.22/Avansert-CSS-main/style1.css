@@ -1,0 +1,64 @@
+/* - Body - */
+body {
+    margin: 0;
+}
+/* - Header - */
+header nav {
+    overflow: auto;
+    padding: 1rem;
+
+    background: linear-gradient(180deg, #ffffff, #00fdff);
+    background-size: 400% 400%;
+
+    animation: AnimationName 40s ease infinite;
+}
+header nav a {
+    text-decoration: none;
+    color: #000;
+}
+header nav h3 {
+    float: left;
+}
+header nav ul{
+    float: right;
+}
+header nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    background-color: #afafaf00;
+    transition: background-color .5s;
+}
+header nav ul li:hover {
+    background-color: #afafaf99;
+    transition: background-color 1s;
+}
+ /* - main - */
+ #front-page-container {
+    margin: 2rem 0;
+    max-width: 1200px;
+    width: 100%;
+
+    overflow: auto;
+ }
+
+ main {
+    width: 80%;
+    float: left;
+ }
+
+ aside {
+    width: 20%;
+    float: right;
+ }
+
+ /* - Footer - */
+ footer {
+    clear: both;
+ }
+
+
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%
+}

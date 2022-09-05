@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(270deg, #0015ff, #00ffe6);
+    background-size: 400% 400%;
+
+    animation: AnimationName 21s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+body {
+    background-color: #00F;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    
+    border-bottom: solid 2px #999;
+    padding-top: 10px;
+    transition: background-color .5s;
+}
+nav a:hover {
+    background-color: #999;
+    transition: background-color 1s;
+}
