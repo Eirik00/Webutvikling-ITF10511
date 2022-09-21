@@ -39,9 +39,19 @@ header nav ul li:hover {
     width: 100%;
 
     overflow: auto;
+    display: grid;
+    grid-template-areas:
+       "header header header"
+       "main main aside"
+       "footer footer footer";
+    grid-gap: 1rem;
  }
+header {
+    grid-area: header;
+}
 
  main {
+    grid-area: main;
     width: 80%;
     float: left;
  }
@@ -49,11 +59,14 @@ header nav ul li:hover {
  aside {
     width: 20%;
     float: right;
+    grid-area: aside;
  }
 
  /* - Footer - */
  footer {
     clear: both;
+     grid-area: footer;
+     background-color: #444;
  }
 
 
