@@ -1,14 +1,30 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Monoton&family=Roboto:wght@300;500&display=swap');
+
 body {
     margin: 0;
+    
+    background-color: rgb(170, 170, 170);
+    padding-bottom: 4rem;
 
     display: grid;
     grid-template: 
         "header header header"
         "main main main"
         "footer footer footer";
+    
+    overflow-x: hidden;
 }
 header {
     grid-area: header;
+
+    background-color: rgb(255, 255, 255);
+    background-image: url("img/header.jpg"); /* Bildet hentet fra https://www.innovationnewsnetwork.com/primordial-galaxy/9398/  © iStock/mik38 */
+    background-size: cover;
+
+    border-bottom: solid 1px;
+    margin-bottom: 2rem;
+    color:rgb(255, 255, 255);
 }
 main {
     grid-area: main;
@@ -18,44 +34,173 @@ footer {
 }
 
 /* NAV BAR */
+
 nav {
+    margin-top: 6rem;
     height: 4rem;
 }
-nav #logo {
-    margin: 0;
-    float: left;
-    font-size: 34px;
-}
-nav div {
-    margin: 0;
-    float: right;
-    width: 70%;
-
-    display: flex;
-    justify-content: space-between;
-}
-nav div a {
-    text-align: center;
-    text-decoration: none;
-    color: #000;
+nav .span {
     width: 100%;
-    height: auto;
-    border-left: solid 1px;
-    
-    transition: background-color .5s ease;
-    padding: .5rem;
+    height: 4rem;
+    background-color: rgb(54, 54, 54);
 }
-nav div a:hover {
-    background-color: rgb(169,169,169);
+nav .span #logo a {
+    text-decoration: none;
+    color: rgb(255,255,255);
 }
+    /* DESKTOP */
+    @media (min-width: 750px){
+        nav .span #logo {
+            font-family: 'Monoton', cursive;
+            margin: -5px 4px;
+            float: left;
+            font-size: 48px;
+        }
+        nav .span div {
+            margin: 0;
+            float: right;
+            width: 70%;
+            height: 4rem;
+        
+            display: flex;
+            justify-content: space-between;
+        }
+        nav .span div a {
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: auto;
+            border-left: solid 1px;
+            padding-top: 1.25rem;
+        
+        
+            transition: background-color .5s ease;
+        }
+        nav .span div a:hover {
+            background-color: rgba(17, 0, 255, 0.144);
+        }
+        main article {
+            min-width: 325px;
+        }
+    }
+    /* MOBILE */
+    @media (min-width: 100px) and (max-width: 749px){
+        header {
+            border: none;
+        }
+        nav {
+            height: 10rem;
+        }
+        nav .span #logo {
+            font-family: 'Monoton', cursive;
+            margin: -5px 4px;
+            float: left;
+            font-size: 48px;
+        }
+        nav .span {   
+            height: 235px;
+        }
+        nav .span div {
+            margin: 0;
+            float: right;
+            width: 70%;
+        
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        nav .span div a {
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: auto;
+            border-left: solid 1px;
+            border-bottom: solid 1px;
+            padding-top: 1.25rem;
+        
+        
+            transition: background-color .5s ease;
+        }
+        nav .span div a:hover {
+            background-color: rgba(17, 0, 255, 0.144);
+        }
+        main article {
+            min-width: 560px;
+        }
+    }
 
 /* MAIN */
 main {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    
 }
 /* ARTICLE */
 main article {
-    border: solid 2px;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    flex-basis: 40%;
+    flex-grow: 1;
+    align-self: stretch;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: .4vw;
+    padding: 1rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+main #ingress {
+    background-color: rgba(255,255,255,0);
+
+}
+main article .tagline {
+    font-size: 30px;
+    margin: 0 1rem 0 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+main article img {
+    float: right;
+    margin: 1rem;
+}
+main article p {
+    float: left;
+}
+main article .button {
+    float: right;
+    background-color:rgb(0, 162, 255);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 2px;
+}
+main article .button:hover {
+    text-decoration: underline;
+}
+/* FOOTER */
+footer {
+    bottom: 0;
+    position: fixed;
+
+    height: 3rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+footer p {
+    margin-left: 5px;
+    margin-right: 5px;
 }
