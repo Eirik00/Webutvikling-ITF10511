@@ -39,6 +39,12 @@ main article iframe{
 #kntkinfo {
     margin-bottom: 5rem
 }
+
+#kntkinfo a {
+    padding: 0;
+    padding-right: .5rem;
+    width: auto;
+}
 @media (min-width: 800px) {
     main article {
         margin: 0 8rem;
