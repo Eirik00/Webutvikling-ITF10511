@@ -78,10 +78,10 @@
                 <!--Kilde: https://kinsta.com/wp-content/uploads/2018/03/what-is-a-content-management-system-1-1024x452.png-->
                 <div class="tabel" id="tabelsss">
                     <!--Row 0-->
-                    <p><a href="https://i.kym-cdn.com/entries/icons/original/000/041/685/cover2.jpg" style="text-decoration: none;color:#000;">Tabell</a></p>
-                    <p>Fordeler</p>
-                    <p>Ulemper</p>
-                    <p>Likheter / Ulikheter</p>
+                    <p class="tittle"><a href="https://i.kym-cdn.com/entries/icons/original/000/041/685/cover2.jpg" style="text-decoration: none;color:#000;">Tabell</a></p>
+                    <p class="tittle">Fordeler</p>
+                    <p class="tittle">Ulemper</p>
+                    <p class="tittle">Likheter / Ulikheter</p>
                     <!--Row 1  Kilde: https://hygraph.com/blog/what-is-a-component-content-management-system-->
                     <p>CCMS - Component Content Management System</p>
                     <p>Med CCMS kan et lag bygge et enkelt og datarikt innholdside, isteden for å oppdatere innholdet til forskjellige systemer kan alt bli gjort i ett og samme sted. CCMS passer på at innholdet er riktig og ryddig strukturert, isteden for å bli ustabilt og glemt i forskjellige systemer. Med et CCMS så er det lettere å gjenkjenne hvor innhold kommer fra og hva som må gjøres før oppdateringen.</p>
@@ -117,41 +117,5 @@
             <p>tlf. 987 65 432</p>
             <p>epost: epost@email.com</p>
         </footer>
-        <script>
-            var rubrikker = document.getElementById("tabelsss").children;
-            var oI = [];
-            var nI = [];
-            var toggleList = [];
-    
-            for(let i = 4;i<rubrikker.length;i++){
-                oI.push(rubrikker[i].innerHTML);
-                nI.push(rubrikker[i].innerHTML.slice(0, 100) + "...");
-                rubrikker[i].onclick = function(){
-                    for(let i = 4;i<rubrikker.length;i++){
-                        if(rubrikker[i].innerHTML == nI[i-4]){
-                            rubrikker[i].innerHTML = oI[i-4];
-                        }
-                        else{
-                            rubrikker[i].innerHTML = nI[i-4];
-                        }
-                    }
-                }
-            }
-    
-            function minimizeTabell(windowsize){
-                if(window.innerWidth < 850){
-                    for(let i=4;i<rubrikker.length;i++){
-                        rubrikker[i].innerHTML = nI[i-4];
-                    }
-                }else{
-                    for(let i=4;i<rubrikker.length;i++){
-                        rubrikker[i].innerHTML = oI[i-4];
-                    }
-                }
-            }
-    
-            self.onresize = minimizeTabell;
-            minimizeTabell();
-        </script>
     </body>
 </html>

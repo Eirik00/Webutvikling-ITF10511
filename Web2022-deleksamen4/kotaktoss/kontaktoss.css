@@ -1,0 +1,51 @@
+main article {
+    display: block;
+}
+main article .tagline {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+main article p {
+    text-align: justify;
+    float: none;
+}
+main article img {
+    width: 250px;
+    margin-top: 0;
+}
+main article iframe{
+    float: right;
+}
+
+@media (max-width: 1049px){  
+    #skjema form{
+        width: 60%;
+        margin-left: .8rem;
+    }
+}
+@media (min-width: 1050px){  
+    #skjema form{
+        width: 457px;
+        margin-left: .8rem;
+    }
+}
+#skjema form div {
+    margin: .8rem 0;
+}
+#skjema form input {
+    float: right;
+}
+
+#kntkinfo {
+    margin-bottom: 5rem
+}
+@media (min-width: 800px) {
+    main article {
+        margin: 0 8rem;
+    }
+}
+@media (min-width: 100px) and (max-width: 799px) {
+    main article {
+        margin: 0 8vw;
+    }
+}
