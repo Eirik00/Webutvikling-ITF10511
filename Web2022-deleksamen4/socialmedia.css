@@ -1,19 +1,28 @@
-#Socialbtns {
-    bottom: 18px;
+@media (min-width: 750px) {
+  #Socialbtns {
+      bottom: 18px;
+      position: fixed;
+      transition: bottom .8s;
+  }
+  #Socialbtns:hover {
+      bottom: 48px;
+      position: fixed;
+      transition: bottom 1s;
+  }
+}
+@media (min-width: 150px) and (max-width: 749px){
+  #Socialbtns {
+    bottom: 0;
     position: fixed;
     transition: bottom .8s;
-}
-#Socialbtns:hover {
-    bottom: 48px;
-    position: fixed;
-    transition: bottom 1s;
+  }
 }
 
 /* Style all font awesome icons */
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 50px;
+    width: 30px;
     text-align: center;
     text-decoration: none;
   }
@@ -34,6 +43,12 @@
   /* Twitter */
   .fa-twitter {
     background: #55ACEE;
+    color: white;
+  }
+  
+  /* Pinterest */
+  .fa-pinterest {
+    background: #cb2027;
     color: white;
   }
 

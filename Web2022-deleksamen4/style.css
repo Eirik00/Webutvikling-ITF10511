@@ -5,7 +5,7 @@ body {
     margin: 0;
     
     background-color: rgb(170, 170, 170);
-    padding-bottom: 4rem;
+    padding-bottom: 48px;
 
     display: grid;
     grid-template: 
@@ -89,28 +89,41 @@ nav .span #logo a {
         main article {
             min-width: 325px;
         }
+
+        /* Hamburger Button */
+        #hamburgertgl {
+            display: none;
+        }
     }
-    /* MOBILE */
+    /* MOBILE  -  Hamburger meny */
     @media (min-width: 150px) and (max-width: 749px){
         header {
             border: none;
         }
         nav {
-            height: 10rem;
+            height: 4rem;
         }
+
+        /* Hamburger Button */
+        #hamburgertgl {
+            float: right;
+            font-size: 30px;
+            padding: 17px;
+        }
+        .fa-bars {
+            color: rgb(255, 255, 255)
+        }
+
         nav .span #logo {
             font-family: 'Monoton', cursive;
             margin: -5px 4px;
             float: left;
             font-size: 48px;
         }
-        nav .span {   
-            height: 235px;
-        }
         nav .span div {
-            margin: 0;
-            float: right;
-            width: 70%;
+            background-color: rgb(54, 54, 54);
+            position:fixed;
+            right: 64px;
         
             display: flex;
             flex-wrap: wrap;
@@ -122,11 +135,11 @@ nav .span #logo a {
             text-align: center;
             text-decoration: none;
             color: rgb(255, 255, 255);
-            width: 100%;
             height: auto;
             border-left: solid 1px;
+            border-right: solid 1px;
             border-bottom: solid 1px;
-            padding-top: 1.25rem;
+            padding: 1.5rem 4rem;
         
         
             transition: background-color .5s ease;
@@ -211,9 +224,22 @@ footer p {
     margin-right: 5px;
 }
 
+@media (min-width: 150px) and (max-width: 749px){
+    body {
+        padding-bottom: 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
 /* - MISC */
 .line-breaker {
     margin-top: 8vw;
     width: .5rem;
     height: .5rem;
+}
+.hideme {
+    display: none !important;
 }
