@@ -11,6 +11,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <title>Analyse</title>
+        <!-- HTML Meta Tags -->
+        <meta name="description" content="Velkommen til Eirik sin analyse av webdesiden.">
+
+            <!-- Google / Search Engine Tags -->
+            <meta itemprop="name" content="WebdesigN">
+            <meta itemprop="description" content="Velkommen til Eirik sin analyse av webdesiden.">
+            <meta itemprop="image" content="http://web.thepit.xyz/deleksamen4/img/header.webp">
+
+            <!-- Facebook Meta Tags -->
+            <meta property="og:url" content="https://web.thepit.xyz/deleksamen4">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="WebdesigN">
+            <meta property="og:description" content="Velkommen til Eirik sin analyse av webdesiden.">
+            <meta property="og:image" content="http://web.thepit.xyz/deleksamen4/img/header.webp">
+
+            <!-- Twitter Meta Tags -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="WebdesigN">
+            <meta name="twitter:description" content="Velkommen til Eirik sin analyse av webdesiden.">
+            <meta name="twitter:image" content="http://web.thepit.xyz/deleksamen4/img/header.webp">
     </head>
     <body>
         <header>
@@ -32,45 +52,123 @@
         <main>
             <article>
                 <p class="tagline">Overskrift</p>
-                <img src="img/150.png" alt="Placeholder image">
-                <h3>Dette er en undertitel</h3>
+                <h3>Analyse med Lighthouse</h3>
+                <p>Jeg valgte å kjøre lighthouse for å analysere min side. Jeg valgte å kjøre lighthouse på alle individuelle sidene, og går utifra dette.</p>
+
+                <p>Før jeg gjorde en analyse ved hjelp av lighthouse endret jeg filtypen til alle bildene på siden fra png og jpg til webp. 
+                    Dette fører til at siden er mer optimalisert og laster inn lettere og raskere.
+
+                    Først og fremst tar jeg en analyse av hjemmesiden, så deretter de andre sidene. Siden de fleste sidene bruker hjemmesiden som stampunkt så kan det hende at de påvirkes om jeg forbedrer hjemmesiden.
+                </p>
+                <img alt="Første gjennomgang med lighthouse resultater" src="../img/lighthouse-before.webp" class="analyseimg">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                    Når jeg først kjørte lighthouse fikk jeg greie tilbakemeldinger, men også ting man kan forbedre nettsiden med. 
+                    Performance og SEO er på 90, accessibility er på 100 mens best practicies er på 83.
+                    Performance, Accessibility og SEO er ganske gode så de er mer ting jeg kan pirke på senere.
+                    Jeg må først fokusere på best practicies.
+                </p>
+                <img alt="Best practice resultater fra lighthouse" src="../img/bestpracticeSEO.webp" class="analyseimg">
+                <p>
+                    På best practices så klager lighthouse på at et av bildene har lav oppløsning, dette er da på grunn av det er et midlertidig bilde jeg bruker på analyse knappen.
+                    Jeg fikset dette med å hente et bilde fra nettet som kan være relevant for analyse temaet.
+                </p>
+                <p>
+                    Etter jeg fikset på bildet og hjemmesiden så fikk jeg en ny score på lighthouse:
+                </p>
+                <img alt="Resultater etter å fikset siden" src="../img/lighthouse-afterindex.webp" class="analyseimg">
+                <p>
+                    på UU vs SEO siden har jeg helt like resultater som indeksen, alt er over 90 og jeg føler at det er ganske bra. Det samme er for CMS og analyse siden.
+                </p>
+                <div class="line-breaker"></div>
+                <img alt="Lighthouse på kontakt oss siden før forbedringer" src="../img/analyse-kontaktoss.webp" class="analyseimg">
+                <p>
+                    Men på "kontakt oss" siden så må noen ting endres ettersom lighthouse tilbakemeldingen er litt dårligere.
+                    Her er accessibility og SEO litt dårligere og den klager på at <span lang="en">"Form elements do not have associated labels"</span> og <span lang="en">"<i>frame</i> or <i>iframe</i> elements do not have a title"</span>.
+                    Form labels er lett å fikse ved å legge til en label tag til hver "form input".
+                    Iframe title er også ganske lett å fikse ved å legge til en title variabel på iframe taggen.
+
+                    I SEO kategorien står det at a tags har ikke en "crawlable link". Dette er fordi jeg bruker a tagg til ikonene men har ikke en link på de, dette kan jeg fikse ved å bytte a taggen med en i tagg.
+                    Da vil ikke søkemotoren tro at den skal linke til en nettside og det vil ikke være noe problem.
                 </p>
                 
-                <h3>Dette er en undertitel</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                <div class="tabel" id="tabelsss">
+                    <!--Row 0-->
+                    <div class="tittle">
+                        <p>før</p>
+                    </div>
+                    <div class="tittle">
+                        <p>etter</p>
+                    </div>
+                    <!--Row 1-->
+                    <div>
+                        <img alt="Første gjennomgang med lighthouse resultater" src="../img/lighthouse-before.webp" class="analyseimg">
+                    </div>
+                    <div>
+                        <img alt="Resultater etter å fikset siden" src="../img/lighthouse-afterindex.webp" class="analyseimg">
+                    </div>
+                    <!--Row 2-->
+                    <div>
+                        <img alt="Lighthouse på kontaktoss siden før" src="../img/analyse-kontaktoss.webp" class="analyseimg">
+                    </div>
+                    <div>
+                        <img alt="Lighthouse på kontaktoss siden før" src="../img/analyse-lighthouse-after.webp" class="analyseimg">
+                    </div>
+                    <!--Row 3-->
+                    <div>
+                        <p>Har ikke så mange flere bilder da sidene har ganske gode resultater på lighthouse. Men på kontakt oss siden så reagerer lighthouse på at en anchor tag er ikke crawlable, dette stusser jeg på da denne anchor taggen er brukt til javascript og ikke skal linke til noen sider.</p>
+                    </div>
+                    <div>
 
+                    </div>
+                </div>
+
+                <h3>Heuristisk evaluering av nettsiden</h3>
+                <p>
+                    Jeg tar å bruker punktene og går igjennom de fra denne <a href="siden">siden</a>.
                 </p>
-                
-                <h3>Dette er en undertitel</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                    <b>Visualisering av systemstatus</b> - Jeg går utifra at de mener det å visualisere hvor brukeren er på nettsiden og hvor de da kan gå videre.
+                    Dette er ganske tydelig på siden da det er stor overskrift på hver innholdside og tittel på fanen, dette føler jeg er nokk til at brukeren kan forstå hvor de er på nettsiden.
 
+                    En ting jeg kunne ha gjort for å gitt enda mer tydelighet på siden er om navbaren sin knapp hadde en annen bakgrunnsfarge når du var på en side, f.eks på UU vs. Seo siden så hadde UU vs SEO knappen hatt en mørkere farge.
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
 
+                <p>
+                    <b>Binding mellom system og realitet</b> - Jeg er litt usikker på hva dette innebærer men tror at de mener tydelighet i tekst og informasjon.
+                    Dette vil jeg påstå er riktig på siden da det er innhold som er tydelig og relevant for temaet til siden.
+                    Det er også lett å navigere da det ikke er vanskelig ord på knappende.
+                </p>
+
+                <p>
+                    <b>Brukerkontroll og frihet</b> - Nettsiden har en nødutveisknapp, logoen. Dette kan ikke alltids være tydelig for brukeren om de ikke vet om dette fra før.
+                    Brukeren kan også bruke navigasjons baren til å gå til andre sider.
+                    Jeg føler at det ikke er så relevant med en nødutveisknapp da det ikke skjer noe farlig om brukeren trykker på feil sted.
+                </p>
+
+                <p>
+                    <b>Konsistens og standarer</b> - I siden er det ganske konsistens ordbruk. Alle navigasjons knapper er helt like uavhengig vilken side du er på, samt logo, header og footer.
+                    Det skal derfor ikke være forvirrende for brukeren å navigere siden.
+                </p>
+
+                <p>
+                    <b>Fleksibilitet og effektivt bruk</b> - Det jeg kan si om dette punktet angående siden min er at på hjemmesiden så er det knapper under artikelkortende, disse fører rett til siden.
+                    Dette kan anses som en snarvei da brukeren ikke trenger å skrolle opp til navigasjonsbaren og finne riktig side.
+                </p>
+
+                <p>
+                    <b>Estetikk og minimalistisk design</b> - Jeg mener at siden har et ganske greit og ryddig design som ikke forvirrer eller kompliserer innhold/brukervenneligheten til siden.
+                    Det er ikke spesielle fargebruk og oppsette er ganske likt på alle sidene, noe som gjør brukeren vant til layouten.
+                </p>
+
+                <p>
+                    De resterende punktene som ikke er nevnt føler jeg ikke er relevant for siden min, da jeg ikke får svart på de.
                 </p>
             </article>
         </main>
         <div id="Socialbtns">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="https://twitter.com/intent/tweet?text=Sjekk%20ut%20denne%20siden%20om%20analyse%20fra%20nettsiden!%0Ahttps%3A%2F%2Fweb.thepit.xyz%2Fdeleksamen4%2Fanalyse%2F" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-pinterest"></a>
+            <a aria-label="Del til Facebook" href="#" class="fa fa-facebook"></a>
+            <a aria-label="Del til Twitter" href="#" class="fa fa-twitter"></a>
+            <a aria-label="Del til Pinterest" href="#" class="fa fa-pinterest"></a>
         </div>
         <footer>
             <p>Copy Right blah blah blah 2022</p>

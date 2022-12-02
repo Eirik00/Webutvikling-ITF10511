@@ -56,7 +56,7 @@ main article img {
         text-align: center;
     }
 }
-@media (min-width: 100px) and (max-width: 999px) {
+@media (max-width: 999px) {
     main article {
         margin: 0 4vw;
     }

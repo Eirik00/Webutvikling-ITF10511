@@ -53,7 +53,7 @@ nav .span #logo a {
     color: rgb(255,255,255);
 }
     /* DESKTOP */
-    @media (min-width: 750px){
+    @media (min-width: 830px){
         nav .span #logo {
             font-family: 'Monoton', cursive;
             margin: -5px 4px;
@@ -96,7 +96,7 @@ nav .span #logo a {
         }
     }
     /* MOBILE  -  Hamburger meny */
-    @media (min-width: 150px) and (max-width: 749px){
+    @media (max-width: 829px){
         header {
             border: none;
         }
@@ -122,7 +122,7 @@ nav .span #logo a {
         }
         nav .span div {
             background-color: rgb(54, 54, 54);
-            position:fixed;
+            position: fixed;
             right: 64px;
         
             display: flex;
@@ -149,6 +149,9 @@ nav .span #logo a {
         }
         main article {
             min-width: 560px;
+        }
+        main article img {
+            width: 70%;
         }
     }
 
@@ -185,10 +188,11 @@ main article .tagline {
     font-weight: 500;
 }
 main article img {
+    object-fit: cover;
     float: right;
     margin: 1rem;
     height: 240px;
-    width: auto;
+    width: 360px;
 }
 main article p {
     float: left;
