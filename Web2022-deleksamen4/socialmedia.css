@@ -1,0 +1,55 @@
+@media (min-width: 750px) {
+  #Socialbtns {
+      bottom: 18px;
+      position: fixed;
+      transition: bottom .8s;
+  }
+  #Socialbtns:hover {
+      bottom: 48px;
+      position: fixed;
+      transition: bottom 1s;
+  }
+}
+@media (min-width: 150px) and (max-width: 749px){
+  #Socialbtns {
+    bottom: 0;
+    position: fixed;
+    transition: bottom .8s;
+  }
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  /* Pinterest */
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+
+  /* Hentet fra w3school
